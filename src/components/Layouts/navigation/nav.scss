@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+li {
+  list-style-type: none;
+}
+
+#Nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #da1a1a, #000);
+  // background: linear-gradient(to right, #ff512f, #dd2476);
+   // cam sang hồng tím
+
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .row-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+
+      .navleft {
+        width: 300px;
+
+        img {
+          width: 55px;
+          height: 55px;
+        }
+      }
+
+      .navmid {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+          height: 40px;
+          width: 400px;
+          border-radius: 30px;
+          border: 2px solid #c86565;
+          outline: none;
+          padding-left: 15px;
+
+          &::placeholder {
+            color: #e11414;
+          }
+        }
+
+        .Search-icon {
+          font-size: 20px;
+          position: absolute;
+          right: 28px;
+          cursor: pointer;
+        }
+      }
+
+      .navright {
+        display: flex;
+
+        li {
+          padding: 20px 0 20px 20px;
+          margin-left: 10px;
+          position: relative;
+
+          .user-icon {
+            font-size: 22px;
+            font-weight: 800;
+            margin-left: 5px;
+          }
+
+          // Dropdown menu style
+          &.dropdown {
+            .dropdow-user {
+              display: none;
+              position: absolute;
+              top: 65px;
+              right: 0;
+              background: #da1a1a;
+              width: 150px;
+              border-radius: 6px;
+              padding: 10px 0;
+              z-index: 999;
+
+              li {
+                padding: 8px 12px;
+
+                a {
+                  color: white;
+                  display: block;
+                }
+
+                &:hover {
+                  background: #8c86869e;
+                }
+              }
+            }
+
+            &:hover .dropdow-user {
+              display: block;
+            }
+          }
+        }
+        .cart {
+          position: relative;
+          .cart-icon {
+            font-size: 22px;
+            font-weight: 800;
+          }
+          .number-order {
+            position: absolute;
+            top: 30px;
+            right: -18px;
+            width: 20px;
+            height: 20px; // đổi từ 18px → 20px cho tròn đều
+            background: rgb(11, 1, 1);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+}
