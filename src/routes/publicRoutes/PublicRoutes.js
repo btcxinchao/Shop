@@ -11,6 +11,7 @@ import Order from "../../pages/oder/Order";
 import PlaceOder from "../../pages/placeOrder/PlaceOder";
 import Profile from "../../pages/profile/Profile";
 import Register from "../../pages/register/Register";
+import Products from "../../products/Products";
 
 export const PublicRoute = [
   {
@@ -23,6 +24,7 @@ export const PublicRoute = [
       { path: "contact", element: <Contact /> },
       { path: "placeoder", element: <PlaceOder /> },
       { path: "colection", element: <Colection /> },
+      { path: "products", element: <Products /> },
       { path: "cart", element: <Cart /> },
       { path: "acc", element: <Acc /> },
       { path: "profile", element: <Profile /> },
